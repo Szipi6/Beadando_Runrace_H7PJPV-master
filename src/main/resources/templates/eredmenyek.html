@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Verseny: <span th:text="${versenyNev}"></span></h1>
+
+<table>
+    <thead>
+    <th>Név</th>
+    <th>Idő</th>
+    </thead>
+
+    <tbody th:each="eredmeny: ${eredmenyek}">
+    <td th:text="${eredmeny.versenyzo.getNev()}"></td>
+    <td th:text="${eredmeny.getIdo()}"></td>
+    </tbody>
+</table>
+</body>
+</html>
